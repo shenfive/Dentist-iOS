@@ -15,6 +15,7 @@
 		BA88A0F41EB2686C000F7B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88A0F21EB2686C000F7B44 /* LaunchScreen.storyboard */; };
 		BA88A0FF1EB2686C000F7B44 /* DentistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A0FE1EB2686C000F7B44 /* DentistTests.swift */; };
 		BA88A10A1EB2686C000F7B44 /* DentistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A1091EB2686C000F7B44 /* DentistUITests.swift */; };
+		BA88A1211EB27491000F7B44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA88A1231EB27491000F7B44 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		BA88A1051EB2686C000F7B44 /* DentistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DentistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA88A1091EB2686C000F7B44 /* DentistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistUITests.swift; sourceTree = "<group>"; };
 		BA88A10B1EB2686C000F7B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA88A1221EB27491000F7B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA88A1241EB27495000F7B44 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BA88A1251EB27496000F7B44 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				BA88A0F21EB2686C000F7B44 /* LaunchScreen.storyboard */,
 				BA88A0F51EB2686C000F7B44 /* Info.plist */,
 				BA88A0ED1EB2686C000F7B44 /* Dentist.xcdatamodeld */,
+				BA88A1231EB27491000F7B44 /* Localizable.strings */,
 			);
 			path = Dentist;
 			sourceTree = "<group>";
@@ -220,6 +225,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = BA88A0DA1EB2686C000F7B44;
 			productRefGroup = BA88A0E41EB2686C000F7B44 /* Products */;
@@ -238,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA88A1211EB27491000F7B44 /* Localizable.strings in Resources */,
 				BA88A0F41EB2686C000F7B44 /* LaunchScreen.storyboard in Resources */,
 				BA88A0F11EB2686C000F7B44 /* Assets.xcassets in Resources */,
 				BA88A0EC1EB2686C000F7B44 /* Main.storyboard in Resources */,
@@ -319,6 +327,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		BA88A1231EB27491000F7B44 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA88A1221EB27491000F7B44 /* Base */,
+				BA88A1241EB27495000F7B44 /* zh-Hans */,
+				BA88A1251EB27496000F7B44 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -326,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -377,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
