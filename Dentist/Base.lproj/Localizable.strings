@@ -1,0 +1,40 @@
+/* 
+  Local.strings
+  Dentist
+
+  Created by 申潤五 on 2017/4/28.
+  Copyright © 2017年 申潤五. All rights reserved.
+*/
+"app_name"="Dentist";
+"title"="Dentist";
+"tab1"="Intro";
+"tab2"="News";
+"tab3"="Therapy";
+"tab4"="Doctoer";
+"newReservation"="New Reservation";
+"myReservation"="My Reservation(s)";
+"doctorSelectTitle"="Select Doctor:";
+"login"="Login";
+"loginAccountTitle"="Enter Your ID:";
+"submit"="Submit";
+"passwordTitle"="Password:";
+"passwordRequest"="6 to 8 characters, including two of characters: 1. capital letters(A~Z) or lowercase (a~z) 2.numbers (0~9 )";
+"idRequest"="Passport Number or Taiwan national ID number";
+"forgetPW"="forget password";
+"newAccount"="Sing in new Account";
+"passwordError001Len"="must 6 to 8 charecters";
+"passwordError002Character"="must including 1. capital letters or lowercase (A~Z)(a~z) 2. numbers (0~9)";
+"loginSuceesfully"="Login suceesfully";
+"nameTitle"="Name:";
+"rePassword"="Confirm password";
+"telephoneNum"="PhoneNum";
+"emailTitle"="E-mail";
+"gender"="Gender";
+"male"="Male";
+"female"="Female";
+"birthday"="Birthday";
+"singin"="Singin";
+"cancel"="Cancel";
+"nameNoEmpty"="Name is  blank";
+"passwordError003dif"="The two passwords must be the same";
+"phoneTooShort"="Phone Number must 10 charecters or more";

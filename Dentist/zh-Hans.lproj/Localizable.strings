@@ -1,0 +1,40 @@
+/* 
+  Local.strings
+  Dentist
+
+  Created by 申潤五 on 2017/4/28.
+  Copyright © 2017年 申潤五. All rights reserved.
+*/
+"app_name"="Dentist";
+"title"="牙医诊所";
+"tab1"="诊所介绍";
+"tab2"="最新消息";
+"tab3"="诊疗项目";
+"tab4"="医师简介";
+"newReservation"="线上预约";
+"myReservation"="我的预约";
+"doctorSelectTitle"="选择医师:";
+"login"="登入";
+"loginAccountTitle"="身份证字号:";
+"submit"="确认";
+"passwordTitle"="密码:";
+"passwordRequest"="6~8 个字元, 需含下列两种字元:1. 英文大/小写字元(A~Z)(a~z) 2.基本数字(0~9)";
+"idRequest"="请输入身分证字号";
+"forgetPW"="忘记密码";
+"newAccount"="新建帐号";
+"passwordError001Len"="需为 6~8 字元";
+"passwordError002Character"="需含下列两种字元:1. 英文大/小写字元(A~Z)(a~z) 2.基本数字(0~9)";
+"loginSuceesfully"="登入成功";
+"nameTitle"="真实姓名:";
+"rePassword"="确认密码:";
+"telephoneNum"="电话号码";
+"emailTitle"="电子邮件";
+"gender"="性别";
+"female"="女";
+"male"="男";
+"birthday"="出生年月日";
+"singin"="注册";
+"cancel"="取消";
+"nameNoEmpty"="姓名不得空白";
+"passwordError003dif"="两次密码必需相同";
+"phoneTooShort"="电话应10码或以上";
