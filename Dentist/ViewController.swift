@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         button02.setTitle(NSLocalizedString("tab2", comment: ""), for: .normal)
         button03.setTitle(NSLocalizedString("tab3", comment: ""), for: .normal)
         button04.setTitle(NSLocalizedString("tab4", comment: ""), for: .normal)
-    newReservationBut.setTitle(NSLocalizedString("newReservation", comment: ""), for: .normal)
+        newReservationBut.setTitle(NSLocalizedString("newReservation", comment: ""), for: .normal)
         myReservationBut.setTitle(NSLocalizedString("myReservation", comment: ""), for: .normal)
         
     }
