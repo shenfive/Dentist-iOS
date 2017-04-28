@@ -78,6 +78,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchNewReservation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50z-t5-qYL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq8-cP-gb5">
                                         <rect key="frame" x="183.5" y="0.0" width="175.5" height="44"/>
@@ -117,11 +120,30 @@
                         <outlet property="button04" destination="h4l-45-dWQ" id="BqO-QJ-Lv8"/>
                         <outlet property="myReservationBut" destination="fq8-cP-gb5" id="jJu-dV-uws"/>
                         <outlet property="newReservationBut" destination="yOl-vI-ieM" id="D6e-0r-uh5"/>
+                        <segue destination="if7-ZV-ezP" kind="show" identifier="newReservation" id="7Bc-px-sf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661.60000000000002" y="776.76161919040487"/>
+            <point key="canvasLocation" x="751" y="777"/>
+        </scene>
+        <!--New Resrvation View Controller-->
+        <scene sceneID="KZX-to-auE">
+            <objects>
+                <viewController id="if7-ZV-ezP" customClass="NewResrvationViewController" customModule="Dentist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AyK-dH-kT0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uvj-L4-Fri"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mSF-M2-o5K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYa-2V-Tn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="1212"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PtH-C5-nnB">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E63FEC50E5F8375BB2D4436 /* Pods_DentistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C39AEEFFCC1AE4B28B7571 /* Pods_DentistTests.framework */; };
 		BA88A0E71EB2686C000F7B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A0E61EB2686C000F7B44 /* AppDelegate.swift */; };
 		BA88A0E91EB2686C000F7B44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A0E81EB2686C000F7B44 /* ViewController.swift */; };
 		BA88A0EC1EB2686C000F7B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88A0EA1EB2686C000F7B44 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 		BA88A0FF1EB2686C000F7B44 /* DentistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A0FE1EB2686C000F7B44 /* DentistTests.swift */; };
 		BA88A10A1EB2686C000F7B44 /* DentistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A1091EB2686C000F7B44 /* DentistUITests.swift */; };
 		BA88A1211EB27491000F7B44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA88A1231EB27491000F7B44 /* Localizable.strings */; };
+		BAB0117E1EB3324100472147 /* NewResrvationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0117D1EB3324100472147 /* NewResrvationViewController.swift */; };
+		C526651D4DBE8B94D0E9995A /* Pods_Dentist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E77169C40371D067AE92A5 /* Pods_Dentist.framework */; };
+		DF8BBA289BBF4331785FDB0C /* Pods_DentistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684366E3522DC8BC4896AF6E /* Pods_DentistUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30207D6CC6FCC2B5E4B5CDFC /* Pods-Dentist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dentist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dentist/Pods-Dentist.release.xcconfig"; sourceTree = "<group>"; };
+		45E77169C40371D067AE92A5 /* Pods_Dentist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dentist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		623549A26E342BE3084CBC55 /* Pods-DentistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentistUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DentistUITests/Pods-DentistUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		684366E3522DC8BC4896AF6E /* Pods_DentistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DentistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		716D29041409D8FA510E4588 /* Pods-DentistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DentistTests/Pods-DentistTests.release.xcconfig"; sourceTree = "<group>"; };
+		8383C78ABE8A0B09FC5493E5 /* Pods-Dentist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dentist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dentist/Pods-Dentist.debug.xcconfig"; sourceTree = "<group>"; };
+		9B0DC851D4E10F7A5994D286 /* Pods-DentistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentistUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DentistUITests/Pods-DentistUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA88A0E31EB2686C000F7B44 /* Dentist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dentist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA88A0E61EB2686C000F7B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA88A0E81EB2686C000F7B44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +64,9 @@
 		BA88A1221EB27491000F7B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA88A1241EB27495000F7B44 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BA88A1251EB27496000F7B44 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BAB0117D1EB3324100472147 /* NewResrvationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewResrvationViewController.swift; sourceTree = "<group>"; };
+		D6C39AEEFFCC1AE4B28B7571 /* Pods_DentistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DentistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7974365A55B825E9B02DB61 /* Pods-DentistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DentistTests/Pods-DentistTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C526651D4DBE8B94D0E9995A /* Pods_Dentist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E63FEC50E5F8375BB2D4436 /* Pods_DentistTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +90,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8BBA289BBF4331785FDB0C /* Pods_DentistUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9735933CD99D7084BE307083 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8383C78ABE8A0B09FC5493E5 /* Pods-Dentist.debug.xcconfig */,
+				30207D6CC6FCC2B5E4B5CDFC /* Pods-Dentist.release.xcconfig */,
+				E7974365A55B825E9B02DB61 /* Pods-DentistTests.debug.xcconfig */,
+				716D29041409D8FA510E4588 /* Pods-DentistTests.release.xcconfig */,
+				623549A26E342BE3084CBC55 /* Pods-DentistUITests.debug.xcconfig */,
+				9B0DC851D4E10F7A5994D286 /* Pods-DentistUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA88A0DA1EB2686C000F7B44 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,8 @@
 				BA88A0FD1EB2686C000F7B44 /* DentistTests */,
 				BA88A1081EB2686C000F7B44 /* DentistUITests */,
 				BA88A0E41EB2686C000F7B44 /* Products */,
+				9735933CD99D7084BE307083 /* Pods */,
+				C0A87C45FC5954667F943C83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				BA88A0E61EB2686C000F7B44 /* AppDelegate.swift */,
+				BAB0117D1EB3324100472147 /* NewResrvationViewController.swift */,
 				BA88A0E81EB2686C000F7B44 /* ViewController.swift */,
 				BA88A0EA1EB2686C000F7B44 /* Main.storyboard */,
 				BA88A0F01EB2686C000F7B44 /* Assets.xcassets */,
@@ -133,6 +166,16 @@
 			path = DentistUITests;
 			sourceTree = "<group>";
 		};
+		C0A87C45FC5954667F943C83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45E77169C40371D067AE92A5 /* Pods_Dentist.framework */,
+				D6C39AEEFFCC1AE4B28B7571 /* Pods_DentistTests.framework */,
+				684366E3522DC8BC4896AF6E /* Pods_DentistUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA88A10E1EB2686C000F7B44 /* Build configuration list for PBXNativeTarget "Dentist" */;
 			buildPhases = (
+				FA3185397672EC2F0BED024D /* [CP] Check Pods Manifest.lock */,
 				BA88A0DF1EB2686C000F7B44 /* Sources */,
 				BA88A0E01EB2686C000F7B44 /* Frameworks */,
 				BA88A0E11EB2686C000F7B44 /* Resources */,
+				30EEFDA5935F1BB4D6FF6575 /* [CP] Embed Pods Frameworks */,
+				A16265894703F0BA72062AD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA88A1111EB2686C000F7B44 /* Build configuration list for PBXNativeTarget "DentistTests" */;
 			buildPhases = (
+				DC2DECEA044185AF71801BC1 /* [CP] Check Pods Manifest.lock */,
 				BA88A0F61EB2686C000F7B44 /* Sources */,
 				BA88A0F71EB2686C000F7B44 /* Frameworks */,
 				BA88A0F81EB2686C000F7B44 /* Resources */,
+				4F11836D7E997CA88EB0667A /* [CP] Embed Pods Frameworks */,
+				F2A83988DE5B05DEA32773E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA88A1141EB2686C000F7B44 /* Build configuration list for PBXNativeTarget "DentistUITests" */;
 			buildPhases = (
+				C5EFB7BAE882EF726D649899 /* [CP] Check Pods Manifest.lock */,
 				BA88A1011EB2686C000F7B44 /* Sources */,
 				BA88A1021EB2686C000F7B44 /* Frameworks */,
 				BA88A1031EB2686C000F7B44 /* Resources */,
+				E953366B9683E64567A06A9B /* [CP] Embed Pods Frameworks */,
+				5E4BB1F2BF9AEF9C0C255571 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +320,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30EEFDA5935F1BB4D6FF6575 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dentist/Pods-Dentist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F11836D7E997CA88EB0667A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DentistTests/Pods-DentistTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E4BB1F2BF9AEF9C0C255571 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DentistUITests/Pods-DentistUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A16265894703F0BA72062AD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dentist/Pods-Dentist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5EFB7BAE882EF726D649899 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2DECEA044185AF71801BC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E953366B9683E64567A06A9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DentistUITests/Pods-DentistUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2A83988DE5B05DEA32773E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DentistTests/Pods-DentistTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3185397672EC2F0BED024D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA88A0DF1EB2686C000F7B44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,6 +465,7 @@
 			files = (
 				BA88A0E91EB2686C000F7B44 /* ViewController.swift in Sources */,
 				BA88A0EF1EB2686C000F7B44 /* Dentist.xcdatamodeld in Sources */,
+				BAB0117E1EB3324100472147 /* NewResrvationViewController.swift in Sources */,
 				BA88A0E71EB2686C000F7B44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +630,7 @@
 		};
 		BA88A10F1EB2686C000F7B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8383C78ABE8A0B09FC5493E5 /* Pods-Dentist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XSVW22JPST;
@@ -452,6 +644,7 @@
 		};
 		BA88A1101EB2686C000F7B44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30207D6CC6FCC2B5E4B5CDFC /* Pods-Dentist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XSVW22JPST;
@@ -465,6 +658,7 @@
 		};
 		BA88A1121EB2686C000F7B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7974365A55B825E9B02DB61 /* Pods-DentistTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +674,7 @@
 		};
 		BA88A1131EB2686C000F7B44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 716D29041409D8FA510E4588 /* Pods-DentistTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +690,7 @@
 		};
 		BA88A1151EB2686C000F7B44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 623549A26E342BE3084CBC55 /* Pods-DentistUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = XSVW22JPST;
@@ -509,6 +705,7 @@
 		};
 		BA88A1161EB2686C000F7B44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0DC851D4E10F7A5994D286 /* Pods-DentistUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = XSVW22JPST;
@@ -540,6 +737,7 @@
 				BA88A1101EB2686C000F7B44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA88A1111EB2686C000F7B44 /* Build configuration list for PBXNativeTarget "DentistTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +746,7 @@
 				BA88A1131EB2686C000F7B44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA88A1141EB2686C000F7B44 /* Build configuration list for PBXNativeTarget "DentistUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +755,7 @@
 				BA88A1161EB2686C000F7B44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
