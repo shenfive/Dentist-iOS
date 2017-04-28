@@ -7,29 +7,79 @@
 //
 
 import UIKit
+import JTAppleCalendar
 
 class NewResrvationViewController: UIViewController {
+    let formater = DateFormatter();
+    let formater2 = DateFormatter();
+    let formater3 = DateFormatter();
 
+    @IBOutlet weak var monthLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        formater3.dateFormat = "MMMM"
+        monthLabel.text = formater3.string(from: Date())
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource{
+    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        
+        formater.dateFormat = "yyyy MM dd"
+        let startDate = Date() //formater.date(from: "2017 01 01")!
+        let endDate = formater.date(from: "2017 12 31")!
+        
+        
+        let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        return parameter
+    }
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "customCell", for: indexPath) as! CostomCell
+        cell.dateLabel.text = cellState.text
+        
+        let s1 = formater.string(from: Date())
+        let s2 = formater.string(from: date)
+        
+        
+        
+        if s1 == s2 {
+            cell.backgroundColor = UIColor.yellow
+        }else{
+            cell.backgroundColor = UIColor.lightGray
+        }
+        
+        formater2.dateFormat = "E"
+        if formater2.string(from: date) == "Sun" || formater2.string(from: date) == "Sat" {
+            cell.dateLabel.textColor = UIColor.red
+        }else{
+            cell.dateLabel.textColor = UIColor.black
+        }
+        
+        if cellState.dateBelongsTo != .thisMonth {
+            cell.dateLabel.textColor = UIColor.darkGray
+            cell.dateLabel.backgroundColor = UIColor.lightGray
+        }
+        
+        
+        return cell
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        monthLabel.text = formater3.string(from: visibleDates.monthDates[0].date)
     }
-    */
+    
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        guard let theCell = cell as? CostomCell else {return}
+        theCell.backgroundColor = UIColor.white
+    }
+    
+    
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        
+    }
+
 
 }

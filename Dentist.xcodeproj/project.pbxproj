@@ -18,6 +18,7 @@
 		BA88A10A1EB2686C000F7B44 /* DentistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88A1091EB2686C000F7B44 /* DentistUITests.swift */; };
 		BA88A1211EB27491000F7B44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA88A1231EB27491000F7B44 /* Localizable.strings */; };
 		BAB0117E1EB3324100472147 /* NewResrvationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0117D1EB3324100472147 /* NewResrvationViewController.swift */; };
+		BAB011801EB344D000472147 /* CostomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0117F1EB344D000472147 /* CostomCell.swift */; };
 		C526651D4DBE8B94D0E9995A /* Pods_Dentist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E77169C40371D067AE92A5 /* Pods_Dentist.framework */; };
 		DF8BBA289BBF4331785FDB0C /* Pods_DentistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684366E3522DC8BC4896AF6E /* Pods_DentistUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		BA88A1241EB27495000F7B44 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BA88A1251EB27496000F7B44 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BAB0117D1EB3324100472147 /* NewResrvationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewResrvationViewController.swift; sourceTree = "<group>"; };
+		BAB0117F1EB344D000472147 /* CostomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostomCell.swift; sourceTree = "<group>"; };
 		D6C39AEEFFCC1AE4B28B7571 /* Pods_DentistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DentistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7974365A55B825E9B02DB61 /* Pods-DentistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DentistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DentistTests/Pods-DentistTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 				BA88A0F51EB2686C000F7B44 /* Info.plist */,
 				BA88A0ED1EB2686C000F7B44 /* Dentist.xcdatamodeld */,
 				BA88A1231EB27491000F7B44 /* Localizable.strings */,
+				BAB0117F1EB344D000472147 /* CostomCell.swift */,
 			);
 			path = Dentist;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB011801EB344D000472147 /* CostomCell.swift in Sources */,
 				BA88A0E91EB2686C000F7B44 /* ViewController.swift in Sources */,
 				BA88A0EF1EB2686C000F7B44 /* Dentist.xcdatamodeld in Sources */,
 				BAB0117E1EB3324100472147 /* NewResrvationViewController.swift in Sources */,
