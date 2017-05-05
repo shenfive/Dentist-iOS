@@ -6,6 +6,7 @@ target 'Dentist' do
   use_frameworks!
 
     pod 'JTAppleCalendar', '~> 7.0'
+    pod 'Alamofire', '4.4.0'
 
   # Pods for Dentist
 
