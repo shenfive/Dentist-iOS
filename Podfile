@@ -7,6 +7,7 @@ target 'Dentist' do
 
     pod 'JTAppleCalendar', '~> 7.0'
     pod 'Alamofire', '4.4.0'
+    pod 'CryptoSwift'
 
   # Pods for Dentist
 

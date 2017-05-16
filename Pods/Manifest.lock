@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.4.0)
+  - CryptoSwift (0.6.8)
   - JTAppleCalendar (7.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.4.0)
+  - CryptoSwift
   - JTAppleCalendar (~> 7.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CryptoSwift: f21ea03ed3a94e79d241648ce26652cd4810508a
   JTAppleCalendar: 7c8cba3e06fd6fdfed72382eeeb87c304e727ddb
 
-PODFILE CHECKSUM: a58534e89e8a29aa7567aa7ceee3b6bd1587fe4a
+PODFILE CHECKSUM: 13ceab0035bbfad604d9e7fda44c694d162c73ac
 
 COCOAPODS: 1.2.1
