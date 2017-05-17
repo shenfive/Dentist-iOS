@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+   
         accountTitle.text = NSLocalizedString("acconut", comment: "")
         passwordTitle.text = NSLocalizedString("passwordTitle", comment: "")
         loginBut.setTitle(NSLocalizedString("login", comment: ""), for: .normal)
@@ -35,11 +35,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginAction(_ sender: UIButton) {
         
-        let urlString = apiURL()+"api/PatientData/LoginPatient"
+        
         guard let account = accountTF.text else {return}
         guard let password = passwordTF.text else {return}
         
-        
+        //檢查輸入字串
         if account == "" {
             showAlert(message:NSLocalizedString("accountNoEmpty", comment: ""))
             return
@@ -51,7 +51,9 @@ class LoginViewController: UIViewController {
         }
         
         showWaiting()
-        print(password.sha256())
+        
+        //打API
+        let urlString = apiURL()+"api/PatientData/LoginPatient"
         let parameters: Parameters = [
             "Header":[
                 "Version":apiVer(),
@@ -96,7 +98,6 @@ class LoginViewController: UIViewController {
     
     
     }
-    
     
     
     
