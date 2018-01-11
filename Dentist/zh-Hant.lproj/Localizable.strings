@@ -22,7 +22,7 @@
 "idRequest"="請輸入身分證字號";
 "forgetPW"="忘記密碼";
 "newAccount"="新建帳號";
-"passwordError001Len"="需為 8~12 字元";
+"passwordError001Len"="需為 6~8 字元";
 "passwordError002Character"="需含下列兩種字元:1. 英文大/小寫字元(A~Z)(a~z)  2.基本數字(0~9)";
 "loginSuceesfully"="登入成功";
 "nameTitle"="真實姓名:";

@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Alamofire
 import Security
-import CryptoSwift
+//import CryptoSwift
 
 class LoginViewController: UIViewController {
 
@@ -54,7 +54,8 @@ class LoginViewController: UIViewController {
         
         //打API
         let urlString = apiURL()+"api/PatientData/LoginPatient"
-        let parameters: Parameters = [
+    
+        let parameters:Parameters = [
             "Header":[
                 "Version":apiVer(),
                 "CompanyId":apiCompanyId(),
@@ -62,29 +63,69 @@ class LoginViewController: UIViewController {
             ],
             "Data":[
                 "Account":account,
-                "PatientPin":password.sha256().uppercased()
+                "PatientPin":sha256(string: password)//  (password.SHA256()?.uppercased() ?? "")
             ]
         ]
         callAPI(urlString: urlString, parameters: parameters)
     }
     
-    
     func callAPI(urlString:String, parameters:Parameters){
-        Alamofire.request(urlString , method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        showWaiting()
+
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 10
+
+        manager.request(urlString , method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate(contentType: ["application/json"])
             .responseJSON { (response) in
+                if response.error?.localizedDescription != nil{
+                    self.showAlert(message: response.error!.localizedDescription)
+                    self.stopWaiting()
+                    return
+                }
                 guard let data = response.data else {return}
                 print(data)
-                print(response)
+
+
+
                 let json = try! JSONSerialization.jsonObject(with: data, options: [])
                 if let resp = json as? [String:Any]{
                     if let header = resp["Header"] as? [String:String]{
                         print(header["StatusCode"]! == "0000")
                         if header["StatusCode"]! == "0000" {
                             if let resData = resp["Data"] as? [String:String?]{
+                                let userDefault = UserDefaults.standard
+                                userDefault.setValue(true, forKey: "SuccessLogin")
+                                print("==============")
                                 print(resData)
+                                print("==============")
+                                if let birthday = resData["Birthday"],
+                                    let patientName = resData["PatientName"],
+                                    let account = resData["Account"],
+                                    let pin = resData["PatientPin"],
+                                    let snID = resData["PatientSN"],
+                                    let gender = resData["Gender"]{
+                                    userDefault.setValue(birthday!, forKey: "Birthday")
+                                    userDefault.setValue(patientName!, forKey: "PatientName")
+                                    userDefault.setValue(account!, forKey: "Account")
+                                    userDefault.setValue(pin!, forKey: "PatientPin")
+                                    userDefault.setValue(snID!, forKey: "PatientSN")
+                                    userDefault.setValue(gender!, forKey: "Gender")
+                                    if let email = resData["PatientEmail"]{
+                                        userDefault.setValue(email!, forKey: "PatientEmail")
+                                    }
+                                    if let mobile = resData["PatientMobile"]{
+                                        userDefault.setValue(mobile!, forKey: "PatietMobile")
+                                    }
+
+
+                                }
+
+
+
+
                             }
-                            
+
                         }else{
                             print("Error:\(header["StatusDesc"]!) Status Code:\(header["StatusCode"]!)")
                             self.showAlert(message: "Error:\(header["StatusDesc"]!) Status Code:\(header["StatusCode"]!)")
@@ -92,13 +133,8 @@ class LoginViewController: UIViewController {
                         
                     }
                 }
-                
+                self.stopWaiting()
         }
-        stopWaiting()
-    
-    
+
     }
-    
-    
-    
 }

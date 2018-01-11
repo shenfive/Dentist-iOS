@@ -14,22 +14,26 @@ class NewResrvationViewController: UIViewController {
     let formater2 = DateFormatter();
     let formater3 = DateFormatter();
 
-    @IBOutlet weak var monthLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         formater3.dateFormat = "MMMM"
-        monthLabel.text = formater3.string(from: Date())
+//        monthLabel.text = formater3.string(from: Date())
 
     }
 
 }
 
 extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource{
+    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+
+    }
+
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
         formater.dateFormat = "yyyy MM dd"
         let startDate = Date() //formater.date(from: "2017 01 01")!
-        let endDate = formater.date(from: "2017 12 31")!
+        let endDate = formater.date(from: "2019 12 31")!
         
         
         let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
@@ -38,37 +42,35 @@ extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalend
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "customCell", for: indexPath) as! CostomCell
         cell.dateLabel.text = cellState.text
-        
         let s1 = formater.string(from: Date())
         let s2 = formater.string(from: date)
-        
-        
-        
+
         if s1 == s2 {
-            cell.backgroundColor = UIColor.yellow
+            cell.layer.backgroundColor = UIColor.yellow.cgColor
         }else{
-            cell.backgroundColor = UIColor.lightGray
+            cell.layer.backgroundColor = UIColor.lightGray.cgColor
         }
-        
+
         formater2.dateFormat = "E"
         if formater2.string(from: date) == "Sun" || formater2.string(from: date) == "Sat" {
             cell.dateLabel.textColor = UIColor.red
         }else{
             cell.dateLabel.textColor = UIColor.black
         }
-        
+
         if cellState.dateBelongsTo != .thisMonth {
             cell.dateLabel.textColor = UIColor.darkGray
             cell.dateLabel.backgroundColor = UIColor.lightGray
         }
-        
-        
+        cell.layer.cornerRadius = cell.frame.height / 2
+
+
         return cell
     }
     
 
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        monthLabel.text = formater3.string(from: visibleDates.monthDates[0].date)
+//        monthLabel.text = formater3.string(from: visibleDates.monthDates[0].date)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

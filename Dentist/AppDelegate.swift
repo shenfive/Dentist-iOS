@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import JTAppleCalendar
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

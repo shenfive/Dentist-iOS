@@ -12,6 +12,7 @@ import Alamofire
 class AddPatientViewController: UIViewController {
 
     @IBOutlet weak var accountTitle: UILabel!
+    @IBOutlet weak var patientNameTitle: UILabel!
     @IBOutlet weak var nIDTitle: UILabel!
     @IBOutlet weak var passwordTitle: UILabel!
     @IBOutlet weak var rePasswordTitle: UILabel!
@@ -24,6 +25,7 @@ class AddPatientViewController: UIViewController {
     
     
     @IBOutlet weak var accountTF: UITextField!
+    @IBOutlet weak var patientName: UITextField!
     @IBOutlet weak var nIDTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var rePasswordTF: UITextField!
@@ -31,10 +33,10 @@ class AddPatientViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var genderSC: UISegmentedControl!
     @IBOutlet weak var birthdayDP: UIDatePicker!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    func setLanguage(){
         accountTitle.text = NSLocalizedString("account", comment: "")
+        patientNameTitle.text = NSLocalizedString("nameTitle",comment: "")
         nIDTitle.text = NSLocalizedString("loginAccountTitle", comment: "")
         passwordTitle.text = NSLocalizedString("passwordTitle", comment: "")
         rePasswordTitle.text = NSLocalizedString("rePassword", comment: "")
@@ -45,6 +47,13 @@ class AddPatientViewController: UIViewController {
         submit.setTitle(NSLocalizedString("submit", comment: ""), for: .normal)
         genderSC.setTitle(NSLocalizedString("male", comment: ""), forSegmentAt: 0)
         genderSC.setTitle(NSLocalizedString("female", comment: ""), forSegmentAt: 1)
+
+    }
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLanguage()
         let formater = DateFormatter()
         formater.dateFormat = "yyyy-MM-dd"
         birthdayDP.maximumDate = formater.date(from: "2016-12-31")
@@ -62,6 +71,7 @@ class AddPatientViewController: UIViewController {
         self.view.endEditing(true)
         
         guard let account = accountTF.text else {return}
+        guard let patientName = patientName.text else {return}
         guard let nID = nIDTF.text?.uppercased() else {return}
         guard let password = passwordTF.text else {return}
         guard let rePassword = rePasswordTF.text else {return}
@@ -71,7 +81,7 @@ class AddPatientViewController: UIViewController {
         if genderSC.selectedSegmentIndex == 1 { gender = "F" }
         let formater = DateFormatter()
         formater.dateFormat = "yyyy-MM-dd"
-        let date = formater.string(from: birthdayDP.date)
+        let dateString = formater.string(from: birthdayDP.date)
         
         if account == "" {
             showAlert(message:NSLocalizedString("accountNoEmpty", comment: ""))
@@ -107,15 +117,22 @@ class AddPatientViewController: UIViewController {
         
         
         
-        let urlString = apiURL()+"api/PatientData/LoginPatient"
+        let urlString = apiURL()+"api/PatientData/AddPatient"
         let parameters: Parameters = [
             "Header":[
                 "Version":apiVer(),
                 "CompanyId":apiCompanyId(),
-                "ActionMode":"LoginPatient"
+                "ActionMode":"AddPatient"
             ],
             "Data":[
-                
+                "Account":account,
+                "PatientSN":nID,
+                "PatientName":patientName,
+                "PatientMobile":telePhone,
+                "PatientPin":password,
+                "PatientEmail":email,
+                "Gender":gender,
+                "Birthday":dateString
             ]
         ]
         callAPI(urlString: urlString, parameters: parameters)
@@ -131,6 +148,7 @@ class AddPatientViewController: UIViewController {
     
     
     func callAPI(urlString:String, parameters:Parameters){
+
         Alamofire.request(urlString , method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate(contentType: ["application/json"])
             .responseJSON { (response) in

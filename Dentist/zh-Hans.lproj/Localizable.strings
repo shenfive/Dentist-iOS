@@ -22,7 +22,7 @@
 "idRequest"="请输入身分证字号";
 "forgetPW"="忘记密码";
 "newAccount"="新建帐号";
-"passwordError001Len"="需要8〜12字元";
+"passwordError001Len"="需要6〜8字元";
 "passwordError002Character"="需含下列两种字元:1. 英文大/小写字元(A~Z)(a~z) 2.基本数字(0~9)";
 "loginSuceesfully"="登入成功";
 "nameTitle"="真实姓名:";
