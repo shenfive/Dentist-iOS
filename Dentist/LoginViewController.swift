@@ -117,13 +117,7 @@ class LoginViewController: UIViewController {
                                     if let mobile = resData["PatientMobile"]{
                                         userDefault.setValue(mobile!, forKey: "PatietMobile")
                                     }
-
-
                                 }
-
-
-
-
                             }
 
                         }else{

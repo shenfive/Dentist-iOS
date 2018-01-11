@@ -14,11 +14,16 @@ class NewResrvationViewController: UIViewController {
     let formater2 = DateFormatter();
     let formater3 = DateFormatter();
 
+    @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var monthLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         formater3.dateFormat = "MMMM"
-//        monthLabel.text = formater3.string(from: Date())
+        monthLabel.text = formater3.string(from: Date())
+        calendarView.minimumLineSpacing = 4
+        calendarView.minimumInteritemSpacing = 6
+        print("Minspace\(calendarView.minimumLineSpacing)")
 
     }
 
@@ -32,13 +37,23 @@ extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalend
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
         formater.dateFormat = "yyyy MM dd"
+
+//        let cal = Calendar.current
         let startDate = Date() //formater.date(from: "2017 01 01")!
-        let endDate = formater.date(from: "2019 12 31")!
-        
-        
-        let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
+
+        let endDate = startDate.addingTimeInterval(31*24*60*60)
+//        let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        let parameter = ConfigurationParameters(startDate: startDate,
+                                                endDate: endDate,
+                                                numberOfRows: 5,
+                                                calendar: Calendar.current,
+                                                generateInDates: nil,
+                                                generateOutDates: nil,
+                                                firstDayOfWeek: DaysOfWeek.sunday,
+                                                hasStrictBoundaries: true)
         return parameter
     }
+    
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "customCell", for: indexPath) as! CostomCell
         cell.dateLabel.text = cellState.text
@@ -48,10 +63,11 @@ extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalend
         if s1 == s2 {
             cell.layer.backgroundColor = UIColor.yellow.cgColor
         }else{
-            cell.layer.backgroundColor = UIColor.lightGray.cgColor
+            cell.layer.backgroundColor = UIColor.clear.cgColor
         }
 
         formater2.dateFormat = "E"
+        formater2.locale = Locale(identifier: "en_US")
         if formater2.string(from: date) == "Sun" || formater2.string(from: date) == "Sat" {
             cell.dateLabel.textColor = UIColor.red
         }else{
@@ -60,7 +76,6 @@ extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalend
 
         if cellState.dateBelongsTo != .thisMonth {
             cell.dateLabel.textColor = UIColor.darkGray
-            cell.dateLabel.backgroundColor = UIColor.lightGray
         }
         cell.layer.cornerRadius = cell.frame.height / 2
 
@@ -70,12 +85,13 @@ extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalend
     
 
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-//        monthLabel.text = formater3.string(from: visibleDates.monthDates[0].date)
+        monthLabel.text = formater3.string(from: visibleDates.monthDates[0].date)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let theCell = cell as? CostomCell else {return}
-        theCell.backgroundColor = UIColor.white
+        print(theCell.dateLabel.text)
+        theCell.layer.backgroundColor = UIColor.white.cgColor
     }
     
     
