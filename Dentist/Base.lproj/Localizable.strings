@@ -21,7 +21,7 @@
 "passwordRequest"="must 8 to 12 charecters";
 "idRequest"="Passport or National ID number";
 "forgetPW"="forget password";
-"newAccount"="Sing in new Account";
+"newAccount"="Sing in";
 "passwordError001Len"="must 6 to 8 charecters";
 "passwordError002Character"="must including 1. capital letters or lowercase (A~Z)(a~z) 2. numbers (0~9)";
 "loginSuceesfully"="Login Sucees";

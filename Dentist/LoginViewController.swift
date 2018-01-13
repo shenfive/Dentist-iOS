@@ -31,6 +31,24 @@ class LoginViewController: UIViewController {
         loginBut.setTitle(NSLocalizedString("login", comment: ""), for: .normal)
         addAccountBut.setTitle(NSLocalizedString("newAccount", comment: ""), for: .normal)
         forgetPasswordBut.setTitle(NSLocalizedString("forgetPW", comment: ""), for: .normal)
+
+        let accountLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        accountTF.layer.borderColor = hexColorToUIColor(hexColorString: "#77cdd6").cgColor
+        accountTF.layer.borderWidth = 1
+        accountTF.layer.cornerRadius = 5
+        accountTF.leftViewMode = .always
+        accountTF.leftView = accountLeftView
+
+        let passwordLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        passwordTF.layer.borderColor = hexColorToUIColor(hexColorString: "#77cdd6").cgColor
+        passwordTF.layer.borderWidth = 1
+        passwordTF.layer.cornerRadius = 5
+        passwordTF.leftViewMode = .always
+        passwordTF.leftView = passwordLeftView
+
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
     }
 
     @IBAction func loginAction(_ sender: UIButton) {

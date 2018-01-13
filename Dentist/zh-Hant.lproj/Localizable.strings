@@ -32,7 +32,7 @@
 "gender"="性別";
 "female"="女";
 "male"="男";
-"birthday"="出生年月日";
+"birthday"="生日";
 "singin"="註冊";
 "cancel"="取消";
 "nameNoEmpty"="姓名不得空白";

@@ -58,12 +58,30 @@ class AddPatientViewController: UIViewController {
         formater.dateFormat = "yyyy-MM-dd"
         birthdayDP.maximumDate = formater.date(from: "2016-12-31")
         
-        
-        
+//        let accountLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+//        accountTF.layer.borderColor = hexColorToUIColor(hexColorString: "#77cdd6").cgColor
+//        accountTF.layer.borderWidth = 1
+//        accountTF.layer.cornerRadius = 5
+//        accountTF.leftViewMode = .always
+//        accountTF.leftView = accountLeftView
 
-        // Do any additional setup after loading the view.
+        setTFBorder(textField: accountTF)
+        setTFBorder(textField: patientName)
+        setTFBorder(textField: nIDTF)
+        setTFBorder(textField: passwordTF)
+        setTFBorder(textField: rePasswordTF)
+        setTFBorder(textField: telephoneTF)
+        setTFBorder(textField: emailTF)
     }
-    
+
+    func setTFBorder(textField:UITextField){
+        let theLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textField.layer.borderColor = hexColorToUIColor(hexColorString: "#77cdd6").cgColor
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+        textField.leftViewMode = .always
+        textField.leftView = theLeftView
+    }
     
 
 
@@ -129,7 +147,7 @@ class AddPatientViewController: UIViewController {
                 "PatientSN":nID,
                 "PatientName":patientName,
                 "PatientMobile":telePhone,
-                "PatientPin":password,
+                "PatientPin":sha256(string: password),
                 "PatientEmail":email,
                 "Gender":gender,
                 "Birthday":dateString
@@ -148,7 +166,7 @@ class AddPatientViewController: UIViewController {
     
     
     func callAPI(urlString:String, parameters:Parameters){
-
+        print(parameters)
         Alamofire.request(urlString , method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .validate(contentType: ["application/json"])
             .responseJSON { (response) in

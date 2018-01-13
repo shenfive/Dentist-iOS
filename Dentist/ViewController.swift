@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var myReservationBut: UIButton!
     @IBOutlet weak var loginBut: UIButton!
     
-    
+    @IBOutlet weak var newReservatingTitle: UILabel!
+    @IBOutlet weak var myReservationTitle: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +31,9 @@ class ViewController: UIViewController {
         button02.setTitle(NSLocalizedString("tab2", comment: ""), for: .normal)
         button03.setTitle(NSLocalizedString("tab3", comment: ""), for: .normal)
         button04.setTitle(NSLocalizedString("tab4", comment: ""), for: .normal)
+        newReservatingTitle.text = NSLocalizedString("newReservation", comment: "")
+        myReservationTitle.text = NSLocalizedString("myReservation", comment: "")
+
 //        newReservationBut.setTitle(NSLocalizedString("newReservation", comment: ""), for: .normal)
 //        myReservationBut.setTitle(NSLocalizedString("myReservation", comment: ""), for: .normal)
 //        loginBut.setTitle(NSLocalizedString("login", comment:""), for: .normal)

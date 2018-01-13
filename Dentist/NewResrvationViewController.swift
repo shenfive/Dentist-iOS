@@ -19,6 +19,9 @@ class NewResrvationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        calendarView.layer.borderColor = UIColor.black.cgColor
+        calendarView.layer.cornerRadius = 10
+        calendarView.layer.borderWidth = 1
         formater3.dateFormat = "MMMM"
         monthLabel.text = formater3.string(from: Date())
         calendarView.minimumLineSpacing = 4
@@ -71,11 +74,11 @@ extension NewResrvationViewController:JTAppleCalendarViewDelegate, JTAppleCalend
         if formater2.string(from: date) == "Sun" || formater2.string(from: date) == "Sat" {
             cell.dateLabel.textColor = UIColor.red
         }else{
-            cell.dateLabel.textColor = UIColor.black
+            cell.dateLabel.textColor = hexColorToUIColor(hexColorString: "#449a9e")
         }
 
         if cellState.dateBelongsTo != .thisMonth {
-            cell.dateLabel.textColor = UIColor.darkGray
+            cell.dateLabel.textColor = hexColorToUIColor(hexColorString: "#c6c8c8")
         }
         cell.layer.cornerRadius = cell.frame.height / 2
 
